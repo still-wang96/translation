@@ -1,0 +1,148 @@
+\documentclass[10pt,a4paper,openany,twoside]{book}
+\input{SETUP/PACKAGE.tex}   %引用宏包所在位置
+\makeindex
+\usepackage{dcolumn}
+\usepackage[UTF8,fontset=none]{ctex}
+\setCJKmainfont[
+  Script=CustomDefault,
+  BoldFont={FandolSong-Bold.otf},
+  ItalicFont={FandolKai-Regular.otf}
+]{FandolSong-Regular.otf}
+\setCJKsansfont[
+  Script=CustomDefault,
+  BoldFont={FandolHei-Regular.otf}
+]{FandolHei-Regular.otf}
+\setCJKmonofont[Script=CustomDefault]{FandolFang-Regular.otf}
+\setCJKfamilyfont{zhsong}[
+  Script=CustomDefault,
+  BoldFont={FandolSong-Bold.otf},
+  ItalicFont={FandolKai-Regular.otf}
+]{FandolSong-Regular.otf}
+\setCJKfamilyfont{zhhei}[
+  Script=CustomDefault,
+  BoldFont={FandolHei-Regular.otf}
+]{FandolHei-Regular.otf}
+\setCJKfamilyfont{zhkai}[Script=CustomDefault]{FandolKai-Regular.otf}
+\setCJKfamilyfont{zhfs}[Script=CustomDefault]{FandolFang-Regular.otf}
+\setCJKfamilyfont{zhli}[
+  Script=CustomDefault,
+  BoldFont={FandolSong-Bold.otf},
+  ItalicFont={FandolKai-Regular.otf}
+]{FandolSong-Regular.otf}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}  
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% 导言区
+\graphicspath{{Fig/}{images/}{translation/Fig/}{translation/images/}}% 可选：设置搜索路径(注意大小写)
+
+% --- 为图片文件添加搜索路径 ---
+% 告诉LaTeX，图片文件也可以在 ../images/ 目录下找到
+% 注意末尾的斜杠 /
+
+% --- 为 \input 和 \include 的 .tex 文件添加搜索路径 ---
+% 这需要使用一个内部宏 \input@path
+% 你可以把所有可能的 .tex 文件父目录都加进去
+\makeatletter
+\def\input@path{{../}{../chapters/}}
+\makeatother
+
+% --- 为其他文件（如 .sty, .cls, .bib）添加搜索路径 ---
+% 这是最通用的方法，但需要编译时设置环境变量
+
+\newcommand{\twodots}{%
+  \mathbin{\vcenter{\offinterlineskip
+    \hbox{$\cdot$}\vskip1pt\hbox{$\cdot$}}}%
+}
+
+\begin{document}
+
+\input{SETUP/FORMAT.tex}    %格式所在位置
+  \fontsize{12}{20}\selectfont%
+  \baselineskip 20pt %
+  \parindent 2em
+\pagenumbering{Roman}   %Roman字体书写页码
+
+%-----------------------------------------------------------------------------
+\input{PREFACE/COVER.TEX} %备注：这里文件夹的名字必须严格区分大小写
+\input{PREFACE/PREFACE0.TEX} 
+\input{PREFACE/PreFACE1.tex} 
+%---------------------------------------目录部分---------------------------------
+\setcounter{tocdepth}{1}      %重新开始页码
+
+
+% 1. 手动打印单栏的“目录”标题
+% 如果你用的是 ctexbook 或 ctexrep，请用 \chapter*
+% 如果你用的是 ctexart，请用 \section*
+% \contentsname 是一个会自动变成“目录”或“Contents”的命令
+\chapter*{\contentsname} 
+%\addcontentsline{toc}{chapter}{\contentsname} % (可选) 让“目录”本身也出现在目录中
+
+% 2. 在两栏环境中，只加载并排版目录条目
+\begin{multicols}{2}
+    \makeatletter      % 允许使用带@的内部命令
+    \@starttoc{toc}    % 这个命令只负责读取.toc文件并生成列表，不包含标题
+    \makeatother       % 恢复@的特殊含义
+\end{multicols}
+
+
+\mainmatter    %前言和目录页码结束，正文重新开始设置页码
+%-----------------------------------------正文开始---------------------------------
+\input{BOOK/chap1}       %第一章
+\input{BOOK/chap2}       %第二章
+\input{BOOK/chap3}       %第三章
+\input{BOOK/chap4}       %第四章
+\input{BOOK/chap5}       %第五章
+\input{BOOK/chap6}
+\input{BOOK/chap7}
+\input{BOOK/chap8}       %第八章
+\input{BOOK/chap9}       %第八章
+\input{BOOK/chap10} 
+\input{BOOK/chap11}
+\input{BOOK/chap12}
+\newpage
+\input{BOOK/INDEX}       %第三章
+
+
+\iffalse
+%\include{preface/intro}
+%\include{preface/intro2}
+\include{PREFACE/PREFACE0.TEX}                                      %译者序
+\include{preface/preface1.TEX}                               %4版前言
+%\include{preface/preface2}                                     %金融前言
+%\include{preface/preface3}                               %3版前言
+%\include{preface/preface4}                               %2版前言
+%\include{preface/preface5}                               %1版前言
+\include{preface/c_abstract}                             %中文摘要
+\include{preface/e_abstract}                             %英文摘要
+
+\include{preface/preface1}                               %序言，译者序
+\renewcommand{\thefigure}{\arabic{figure}}
+\include{book/chap1}       %第一章
+\include{book/chap2}       %第二章
+\include{book/chap3}       %第三章
+%\include{book/chap4}       %第四章
+%\include{book/appendix1}
+%\include{book/chap5}       %第五章
+%\include{book/chap6}       %第六章
+%\include{book/chap7}       %第七章
+%\include{book/appendix2}
+%\include{book/chap8}       %第八章
+%\include{book/appendix3}
+%\include{book/chap9}       %第九章
+%\include{book/appendix4}
+%\include{book/chap10}       %第十章
+%\include{book/chap11}   %第十一章
+%\include{book/chap12}   %第十二章
+%-----------------------------------------正文结束--------------------------------
+%\include{reference/references}                              %参考文献部分
+%\include{book/answer}                                          %习题答案
+%\include{book/appendix5}
+%\include{book/index}                                          %索引
+\fi
+
+
+\end{document}
