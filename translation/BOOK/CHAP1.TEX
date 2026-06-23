@@ -649,6 +649,11 @@ m = \operatorname{mex}\left( S\right)  = \min \{ k \geq  0 \mid  k \notin  S\} .
 
 如果在一个博弈位置中，两个玩家可用的行动可能不同，那么这个组合博弈就被称为有偏博弈。这些博弈有丰富的理论，我们在这里概述其最初的概念，特别是四种结果类，以及在某些博弈中作为位置强度的数字，这是由康威(2001 年)开创的。
 
+\newcommand{\domV}{\vcenter{\hbox{\begin{tikzpicture}[scale=0.14,baseline=-0.5ex]\draw (0,0) rectangle (1,2);\draw (0,1)--(1,1);\end{tikzpicture}}}}
+\newcommand{\domH}{\vcenter{\hbox{\begin{tikzpicture}[scale=0.14,baseline=-0.5ex]\draw (0,0) rectangle (2,1);\draw (1,0)--(1,1);\end{tikzpicture}}}}
+\newcommand{\domL}{\vcenter{\hbox{\begin{tikzpicture}[scale=0.14,baseline=-0.5ex]\draw (0,0) rectangle (1,3);\draw (0,1)--(1,1);\draw (0,2)--(2,2);\draw (1,2) rectangle (2,3);\end{tikzpicture}}}}
+\newcommand{\domSq}{\vcenter{\hbox{\begin{tikzpicture}[scale=0.14,baseline=-0.5ex]\draw (0,0) rectangle (2,2);\draw (1,0)--(1,2);\draw (0,1)--(2,1);\end{tikzpicture}}}}
+
 两个玩家分别称为左玩家和右玩家。考虑纵横棋博弈，它由一个方格棋盘给出(起始位置通常是矩形，但不必如此)，在每一步中，左玩家可以用一个垂直的多米诺骨牌占据两个垂直相邻的空格，右玩家可以用一个水平的多米诺骨牌占据两个水平相邻的空格。(至少小写字母“l”比字母“r”更垂直，这样可以记住这一点。)因此，从一个 3 行 2 列的棋盘开始，在考虑对称性的情况下，我们有
 \begin{equation}
 \label{eq:1.23}
@@ -670,9 +675,9 @@ m = \operatorname{mex}\left( S\right)  = \min \{ k \geq  0 \mid  k \notin  S\} .
 
 \(\mathcal{N}\) :先行动的玩家获胜。(有时称为“下一玩家”，尽管这和“下周五”一样模棱两可，因为实际上是当前玩家获胜。)
 
-每个博弈都恰好属于这些结果类之一。\(\mathcal{P}\) 局面就是前面说的必败位置，\(\mathcal{N}\) 局面就是必胜位置。对有偏博弈(partizan game)来说，还必须考虑另外两类 \(\mathcal{L}\) 和 \(\mathcal{R}\)。在纵横棋(Domineering)中，一个至少含两个方格的竖条，最小形式为 -，属于 \(\mathcal{L}\) 类；相应的横条属于 \(\mathcal{R}\) 类。\eqref{eq:1.23}中的起始 \(3\times2\) 棋盘属于 \(\mathcal{N}\) 类。
+每个博弈都恰好属于这些结果类之一。\(\mathcal{P}\) 局面就是前面说的必败位置，\(\mathcal{N}\) 局面就是必胜位置。对有偏博弈(partizan game)来说，还必须考虑另外两类 \(\mathcal{L}\) 和 \(\mathcal{R}\)。在纵横棋(Domineering)中，一个至少含两个方格的竖条，最小形式为 \(\domV\)，属于 \(\mathcal{L}\) 类；相应的横条 \(\domH\) 属于 \(\mathcal{R}\) 类。\eqref{eq:1.23}中的起始 \(3\times2\) 棋盘属于 \(\mathcal{N}\) 类。
 
-在\eqref{eq:1.23}中，Right 的第一步创造出两个互不相连的 \(1\times2\) 博弈；和前面一样，这表示一个博弈之和(game sum)。若对任意其他博弈 \(J\)，\(G+J\) 与 \(H+J\) 总属于同一结果类，则称 \(G\) 与 \(H\) 等价，记为 \(G\equiv H\)。这扩展了定义~\ref{def:1.5}。每个必败博弈(\(\mathcal{P}\) 类中的任意博弈)都等价于没有选项的零博弈 0，论证与引理~\ref{lem:1.8}相同。因此，引理~\ref{lem:1.10}仍然成立：加上一个必败博弈不会改变原博弈的结果类。
+在\eqref{eq:1.23}中，Right 的第一步创造出两个互不相连的 \(1\times2\) 博弈；和前面一样，这表示一个博弈之和(game sum)，这里是 \(\domH+\domH\)。这个博弈显然属于 \(\mathcal{R}\) 类，正如 \(\domH\) 本身也属于 \(\mathcal{R}\) 类。若对任意其他博弈 \(J\)，\(G+J\) 与 \(H+J\) 总属于同一结果类，则称 \(G\) 与 \(H\) 等价，记为 \(G\equiv H\)。这扩展了定义~\ref{def:1.5}。每个必败博弈(\(\mathcal{P}\) 类中的任意博弈)都等价于没有选项的零博弈 0，论证与引理~\ref{lem:1.8}相同。因此，引理~\ref{lem:1.10}仍然成立：加上一个必败博弈不会改变原博弈的结果类。
 
 对于任何有偏博弈 \(G\) ，存在一个负博弈 \(- G\) ，使得如 \eqref{eq:1.13} 中所述的 \(G + \left( {-G}\right)  \equiv  0\) 成立。这个负博弈是通过交换 Left 和 Right 的选项，并对它们的选项进行递归交换得到的。对于纵横棋(Domineering)，任何博弈位置 \(G\) 的负博弈(由尚未被多米诺骨牌(domino)占据的方格表示)是通过将棋盘旋转 90 度得到的。例如，
 \begin{equation}
@@ -681,11 +686,11 @@ m = \operatorname{mex}\left( S\right)  = \min \{ k \geq  0 \mid  k \notin  S\} .
 \end{equation}
 因为一个组件中玩家的任何行动都可以被另一个玩家在另一个组件中进行相应的行动所复制。通过这种方式，第二个玩家总是有行动可做，并且当达到 \(0 + 0\) 局势时获胜。
 
-形式上，一个博弈 \(G\) 由两组博弈 \({\mathcal{G}}^{L}\) 和 \({\mathcal{G}}^{R}\) 定义，它们分别定义了 Left 和 Right 的选项。那么 \(G\) 可以写成 \(\left\{  {{\mathcal{G}}^{L} \mid  {\mathcal{G}}^{R}}\right\}\) 。在具体例子中，人们直接列出集合 \({\mathcal{G}}^{L}\) 和 \({\mathcal{G}}^{R}\) 的元素，而不是使用集合符号。例如，如果 \({\mathcal{G}}^{L} = {\mathcal{G}}^{R} = \varnothing\) ，那么我们将这个博弈写成 \(\{ \left| {\} \text{ rather than }\{ \varnothing }\right| \varnothing \}\) 。这是可能的最简单的博弈，任何玩家都没有选项，我们用 0 来表示:
+形式上，一个博弈 \(G\) 由两组博弈 \({\mathcal{G}}^{L}\) 和 \({\mathcal{G}}^{R}\) 定义，它们分别定义了 Left 和 Right 的选项。那么 \(G\) 可以写成 \(\left\{  {{\mathcal{G}}^{L} \mid  {\mathcal{G}}^{R}}\right\}\) 。在具体例子中，人们直接列出集合 \({\mathcal{G}}^{L}\) 和 \({\mathcal{G}}^{R}\) 的元素，而不是使用集合符号。例如，如果 \({\mathcal{G}}^{L} = {\mathcal{G}}^{R} = \varnothing\)，那么我们将这个博弈写成 \(\{\mid\}\)，而不是 \(\{\varnothing\mid\varnothing\}\)。这是可能的最简单的博弈，任何玩家都没有选项，我们用 0 来表示:
 
 \begin{equation}
 \label{eq:1.25}
-0 = \{  \mid  \} \text{ . }
+0 = \{\mid\}.
 \end{equation}
 
 博弈中的选项是递归定义的。我们可以将 \eqref{eq:1.23} 写成
@@ -698,43 +703,43 @@ m = \operatorname{mex}\left( S\right)  = \min \{ k \geq  0 \mid  k \notin  S\} .
 并继续定义
 \begin{equation}
 \label{eq:1.27}
-\square = \{0,\square \mid \square\},
+\domL = \{0,\domH \mid \domV\},
 \end{equation}
 
 其中 Left 的第一个选项是将多米诺骨牌(domino)放在左上角，这使得 Right 没有进一步的行动，第二个(较差的)选项是将多米诺骨牌放在底部；Right 只有一种选择。此外，
 
 \begin{equation}
 \label{eq:1.28}
-\square  = \left\{  {0|}\right\}  ,\;\square \square  = \left\{  {0|0}\right\}  ,
+\domV  = \{0\mid\},\qquad \domH = \{\mid 0\},
 \end{equation}
 
 这些是 Left 或 Right 分别只剩下一步行动，而另一个玩家没有行动的局势。\eqref{eq:1.26} 中 Right 的第一个选项也可以通过博弈之和的递归定义来定义为
 
 \[
-\square \square  + \square \square  = \left\{  {\square \square }\right\}  ,
+\domH + \domH = \{\mid \domH\},
 \]
 
 \eqref{eq:1.26} 中 Right 的第二个选项定义为
 \begin{equation}
 \label{eq:1.29}
-\square = \{\square \mid \square\}.
+\domSq = \{\domV \mid \domH\}.
 \end{equation}
 定义 \eqref{eq:1.25} 到 \eqref{eq:1.29} 通过引用更简单的博弈进行递归定义，所示的棋盘配置作为合适的占位符。重要的是在后续的最优玩法中哪个玩家最终失败。
 
-在\eqref{eq:1.27}中，Left 有一个被占优选项[1]，理性玩家永远不应选择它，因为这样会白白让 Right 多走一步。被占优选项可以省略，从而简化博弈的递归描述。
+在\eqref{eq:1.27}中，Left 有一个被占优选项 \(\domH\)，理性玩家永远不应选择它，因为这样会白白让 Right 多走一步。被占优选项可以省略，从而简化博弈的递归描述。
 
-注意:在无偏博弈塞砖棋(Cram)的棋盘布局1中，没有被占优选项。
+注意:在无偏博弈塞砖棋(Cram)的棋盘布局 \(\domSq\) 中，没有被占优选项。
 
 在塞砖棋(Cram)中，这种布局等价于大小为 2 的尼姆堆 \(*2\)。它有两个选项 \(*1\) 和 0，且二者互不占优。例如，在博弈之和 \(*2+*1\) 中，走到 \(*1+*1\) 是制胜行动，这就需要用到 \(*2\) 的选项 \(*1\)。无偏博弈(impartial game)恰好是满足 \(\left\{ {{\mathcal{G}}^{L}\mid{\mathcal{G}}^{R}}\right\}\) 且 \({\mathcal{G}}^{L}={\mathcal{G}}^{R}\) 的博弈，并且其选项本身也都是无偏博弈。由\eqref{eq:1.25}可知，最简单的无偏博弈是 0；次简单的是 \(\{0\mid0\}\)，也就是大小为 1 的尼姆堆 \(*1\)，通常也写作 \(*\)。
 
-在有偏博弈(partizan game)中，一个重要的新概念是“数”。它适用于某些有偏博弈，但不是全部。如果一个博弈可以表示为一个数，这个数就表示 Left 在该博弈中安全领先的步数。最简单的数是整数，但也可以出现某些分数。例如，纵横棋(Domineering)中的竖条局面可以表示为整数 1。并且 \(1+1=2\)，也就是说，数的博弈之和对应于普通算术加法。类似地，纵横棋中对应于 \(-1\) 的横条局面满足 \(1+\left({-1}\right)\equiv0\)。对于正整数 \(n\)，若 Left 领先 \(n\) 步并走掉其中一步，之后仍领先 \(n-1\) 步。于是可用 \(n\) 表示该博弈，并得到递归定义
+在有偏博弈(partizan game)中，一个重要的新概念是“数”。它适用于某些有偏博弈，但不是全部。如果一个博弈可以表示为一个数，这个数就表示 Left 在该博弈中安全领先的步数。最简单的数是整数，但也可以出现某些分数。例如，纵横棋(Domineering)中的竖条局面 \(\domV\) 可以表示为整数 1。并且 \(1+1=2\)，也就是说，数的博弈之和对应于普通算术加法。类似地，纵横棋中对应于 \(-1\) 的横条局面 \(\domH\) 满足 \(1+\left({-1}\right)\equiv0\)。对于正整数 \(n\)，若 Left 领先 \(n\) 步并走掉其中一步，之后仍领先 \(n-1\) 步。于是可用 \(n\) 表示该博弈，并得到递归定义
 
 \begin{equation}
 \label{eq:1.30}
-n = \{ n - 1 \mid  \} ,
+n = \{n-1\mid\},
 \end{equation}
 
-它的基础情况是 \(1 = \{ 0 \mid  \}\) ，如\eqref{eq:1.28}所示。负整数对应的博弈被定义为正整数对应博弈的负博弈(negative game) \(- n\) 。在博弈 \(- n\) 中，后手玩家(右方)领先 \(n\) 步。
+它的基础情况是 \(1=\{0\mid\}\)，如\eqref{eq:1.28}所示。负整数对应的博弈被定义为正整数对应博弈的负博弈(negative game) \(- n\) 。在博弈 \(- n\) 中，后手玩家(右方)领先 \(n\) 步。
 
 注意：除 0 之外，没有无偏博弈可以表示为数。\eqref{eq:1.18}中定义的尼姆堆完全不同，它遵循的是 \(*n+*n\equiv0\) 这样的规则。尼姆堆有时称为“尼姆数”(nimber)，以区别于普通的数。
 
@@ -767,15 +772,13 @@ G \geq  H \Leftrightarrow  \left( {\forall J : \text{ Left wins in }H + J \Right
 
 \begin{definition}\label{def:1.18}一个博弈 \(G = \left\{  {{\mathcal{G}}^{L} \mid  {\mathcal{G}}^{R}}\right\}\) 是一个数字，如果 \(G\) 的所有左选项 \({G}^{L} \in  {\mathcal{G}}^{L}\) 和 \(G\) 的所有右选项 \({G}^{R} \in  {\mathcal{G}}^{R}\) 都是数字，并且满足 \({G}^{L} < G < {G}^{R}\)。
 \end{definition}
-最简单的数字是 \(0 = \{  \mid  \}\) ，因为它没有左选项或右选项，所以对于 \(G = 0\) 的条件 \({G}^{L} < G < {G}^{R}\) 显然成立。类似地，对于正整数 \(n\) 在 \eqref{eq:1.30} 中定义的博弈是一个数字，因为它的左选项满足 \(n - 1 < n\) ，并且它没有右选项。
+最简单的数字是 \(0=\{\mid\}\)，因为它没有左选项或右选项，所以对于 \(G = 0\) 的条件 \({G}^{L} < G < {G}^{R}\) 显然成立。类似地，对于正整数 \(n\) 在 \eqref{eq:1.30} 中定义的博弈是一个数字，因为它的左选项满足 \(n - 1 < n\) ，并且它没有右选项。
 
 定义 \ref{def:1.18} 中不等式 \({G}^{L} < G < {G}^{R}\) 的直观理解是，在一个数字博弈中移动时，玩家放弃了安全优势，从而削弱了自己的局面，因此移动到左选项 \({G}^{L}\) 会削弱左方( \({G}^{L} < G\) )的局面，而移动到右选项 \({G}^{R}\) 会削弱右方 \(\left( {G < {G}^{R}}\right)\) 的局面。
 
-在一个数字博弈中移动所放弃的优势可能很小，因为博弈也可以是分数形式的数字。例如，纵横棋
+在一个数字博弈中移动所放弃的优势可能很小，因为博弈也可以是分数形式的数字。例如，纵横棋局面 \(\domL\)(见\eqref{eq:1.27}) 由 \(\{0,-1\mid1\}\) 给出(或者，因为 \(-1\) 被占优，由 \(\{0\mid1\}\) 给出)。
 
-\eqref{eq:1.27} 中的局面 1 由 \(\{ 0, - 1 \mid  1\}\) 给出(或者，因为 -1 被占优，由 \(\{ 0 \mid  1\}\) 给出)。
-
-其中 \(0 = \{ \left| \right| \}\) 和 \(1 = \{ 0 \mid  \}\) 根据 \eqref{eq:1.30}，因此根据定义~\ref{def:1.18} 它是一个数。那个数是分数 \(\frac{1}{2}\) ，也就是说，在这个博弈中先手玩家(左玩家)领先半手，因为 \(\frac{1}{2} + \frac{1}{2} + \left( {-1}\right)  \equiv  0\) ，即\eqref{eq:1.32}
+其中 \(0=\{\mid\}\) 且 \(1=\{0\mid\}\) 根据 \eqref{eq:1.30}，因此根据定义~\ref{def:1.18} 它是一个数。那个数是分数 \(\frac{1}{2}\)，也就是说，在这个博弈中左玩家领先半手，因为 \(\frac{1}{2}+\frac{1}{2}+(-1)\equiv0\)，即\eqref{eq:1.32}
 
 
 \begin{equation}
@@ -795,20 +798,22 @@ G \geq  H \Leftrightarrow  \left( {\forall J : \text{ Left wins in }H + J \Right
 
 这表明左玩家作为起始玩家会失败，同样，右玩家作为起始玩家也会失败。
 
-就递归定义的博弈而言，从 \(0 = \{  \mid  \}\) 的定义开始，\eqref{eq:1.32} 表明
+就递归定义的博弈而言，从 \(0=\{\mid\}\) 的定义开始，\eqref{eq:1.32} 表明
 
 \begin{equation}
 \label{eq:1.33}
-\{ 0 \mid  1\}  + \{ 0 \mid  1\}  + \left( {-1}\right)  \equiv  0. 
+\{0\mid1\}+\{0\mid1\}+(-1)\equiv0. 
 \end{equation}
 
-这与 \eqref{eq:1.32} 中纵横棋(Domineering)走法的原因相同，只是更抽象一些。回想一下 \(- 1 = \{  \mid  0\}\) (这对右玩家来说是一步安全走法)。在 \eqref{eq:1.33} 的博弈之和 \(\{ 0 \mid  1\}  + \{ 0 \mid  1\}  + \{  \mid  0\}\) 中，左玩家只能在组件 \(\{ 0 \mid  1\}\) 中走棋，所以下一个博弈状态是 \(0 + \{ 0 \mid  1\}  + \{  \mid  0\}  = \{ 0 \mid  1\}  + \{  \mid  0\}\) 。在这里，右玩家有一个选择，要么在第一个组件中走到 \(1 + \{  \mid  0\}\) ，这是 \(1 + \left( {-1}\right)  = 0\) 且对接下来走棋的左玩家来说是失败局面，要么在第二个组件中(使用他的安全走法)走到 \(\{ 0 \mid  1\}  + 0 = \{ 0 \mid  1\}\) ，这对左玩家来说是胜利局面。显然，右玩家应该选择前者。因此，左玩家作为起始玩家在 \(\{ 0 \mid  1\}  + \{ 0 \mid  1\}  + \{ 0 \mid  1\}\) 中失败。通过非常类似的推理，右玩家作为起始玩家也会失败，这就证明了 \eqref{eq:1.33}。
+这与 \eqref{eq:1.32} 中纵横棋(Domineering)走法的原因相同，只是更抽象一些。回想一下 \(-1=\{\mid0\}\) (这对右玩家来说是一步安全走法)。在 \eqref{eq:1.33} 的博弈之和 \(\{0\mid1\}+\{0\mid1\}+\{\mid0\}\) 中，左玩家只能在组件 \(\{0\mid1\}\) 中走棋，所以下一个博弈状态是 \(0+\{0\mid1\}+\{\mid0\}=\{0\mid1\}+\{\mid0\}\)。在这里，右玩家有一个选择，要么在第一个组件中走到 \(1+\{\mid0\}\)，这是 \(1+(-1)=0\) 且对接下来走棋的左玩家来说是失败局面，要么在第二个组件中(使用他的安全走法)走到 \(\{0\mid1\}+0=\{0\mid1\}\)，这对左玩家来说是胜利局面。显然，右玩家应该选择前者。因此，左玩家作为起始玩家在 \(\{0\mid1\}+\{0\mid1\}+\{\mid0\}\) 中失败。通过非常类似的推理，右玩家作为起始玩家也会失败，这就证明了 \eqref{eq:1.33}。
 
 作为这个论证的扩展，对于每个正整数 \(p\) ，都有一个可以与分数 \(\frac{1}{{2}^{p}}\) 对应的博弈，其递归定义如下:
 
 \begin{equation}
 \label{eq:1.34}
-\frac{1}{{2}^{p}} = \left\{  {0\left| {\;\frac{1}{{2}^{p - 1}}}\right. }\right\}  \;\text{ and hence }\;\frac{-1}{{2}^{p}} = \left\{  {\left. \frac{-1}{{2}^{p - 1}}\right| \;0}\right\}  . 
+\frac{1}{{2}^{p}} = \left\{0 \,\middle|\, \frac{1}{{2}^{p - 1}}\right\}
+\quad\text{and hence}\quad
+\frac{-1}{{2}^{p}} = \left\{\frac{-1}{{2}^{p - 1}} \,\middle|\, 0\right\}.
 \end{equation}
 
 为了证明
@@ -826,12 +831,12 @@ G \geq  H \Leftrightarrow  \left( {\forall J : \text{ Left wins in }H + J \Right
 
 \begin{equation}
 \label{eq:1.36}
-\frac{m}{{2}^{p}} = \left\{  {\left. \frac{m - 1}{{2}^{p}}\right| \;\frac{m + 1}{{2}^{p}}}\right\}  .
+\frac{m}{{2}^{p}} = \left\{\frac{m - 1}{{2}^{p}} \,\middle|\, \frac{m + 1}{{2}^{p}}\right\}.
 \end{equation}
 \end{definition}
 
 
-在 \eqref{eq:1.36} 的右边， \(m - 1\) 和 \(m + 1\) 是偶数，并且我们假设得到的分数像通常那样进行了最大程度的约分，所以它们的分母更小，或者像 \eqref{eq:1.30} 中那样是整数。因此，\eqref{eq:1.36} 是一个递归定义。\eqref{eq:1.36} 的一个例子是 \(\frac{17}{8} = \left\{  {\frac{16}{8}\left| {\;\frac{18}{8}}\right. }\right\}   = \left\{  {2\left| {\;\frac{9}{4}}\right. }\right\}\) 。
+在 \eqref{eq:1.36} 的右边， \(m - 1\) 和 \(m + 1\) 是偶数，并且我们假设得到的分数像通常那样进行了最大程度的约分，所以它们的分母更小，或者像 \eqref{eq:1.30} 中那样是整数。因此，\eqref{eq:1.36} 是一个递归定义。\eqref{eq:1.36} 的一个例子是 \(\frac{17}{8} = \left\{\frac{16}{8}\,\middle|\,\frac{18}{8}\right\} = \left\{2\,\middle|\,\frac{9}{4}\right\}\) 。
 
 方程 \eqref{eq:1.33} 证明了定义 \(\frac{1}{2} = \{ 0 \mid  1\}\) 的合理性。类似地，必须证明 \eqref{eq:1.36} 中的博弈 \(\frac{m}{{2}^{p}}\) 是一个数，并且
 
