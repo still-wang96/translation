@@ -82,7 +82,7 @@ P \precsim  Q\; \Leftrightarrow  \;\mathbb{E}\left( {u,P}\right)  \leq  \mathbb{
 在采用 \(u(x_0)=0\) 和 \(u(x_1)=1\) 这一效用尺度后，期望效用函数的每个取值 \(u(z)\) 都恰好等于某个概率 \(\alpha\)：在简单彩票 \(x_0\wedge_{\alpha}x_1\) 中，以概率 \(\alpha\) 得到 \(x_1\)，以概率 \(1-\alpha\) 得到 \(x_0\)，并且参与人在该彩票与确定获得 \(z\) 之间无差异。这一点具有重要的意义。为简单起见，假设在所有可能结果中，\(x_0\) 是最不偏好的结果，而 \(x_1\) 是最偏好的结果，因此对于任意结果 \(z\)，都有 \(x_0\precsim z\precsim x_1\)。定义 \(u(z)\in[0,1]\) 为满足 \(z\sim x_0\wedge_{\alpha}x_1\) 的概率 \(\alpha\)。此时，\(\alpha\) 是唯一的，因此效用函数 \(u\) 在正仿射变换意义下也是唯一的。
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth]{images/ch05-fig01.jpg}
+    \includegraphics[width=0.8\linewidth]{translation/images/ch05-fig01.jpg}
     \caption{彩票 \(P\) 的等价概率树，结果 \({z}_{1},\ldots ,{z}_{n}\) 的概率为 \({p}_{1},\ldots ,{p}_{n}\)，其中结果 \({x}_{1}\) 的概率分别为 \(p = \mathop{\sum }\limits_{{i = 1}}^{n}{p}_{i}{\alpha }_{i}\)。}\label{fig:5.1}
   \end{figure}
   
@@ -284,7 +284,7 @@ P \precsim Q
 以下操作将两个现有的彩票组合起来。假设 \(\alpha  \in  \left\lbrack  {0,1}\right\rbrack\) 和 \(P\) 以及 \(Q\) 是关于 \(X\) 的两个彩票。那么组合彩票 \(\left( {1 - \alpha }\right) P + {\alpha Q}\) 是一个新的彩票，可以看作是一个两阶段过程，如下图所示，我们称之为概率树(一种只有机会行动的博弈树)，
 \begin{equation}\label{eq:5.15}
 \vcenter{\hbox{
-    \includegraphics[width=0.2\textwidth]{images/ch05-fig02.jpg}
+    \includegraphics[width=0.2\textwidth]{translation/images/ch05-fig02.jpg}
 }}
 \end{equation}
 在第一阶段，以概率 \(1 - \alpha\) 选择 \(P\)，以概率 \(\alpha\) 选择 \(Q\)，然后以各自的结果概率来进行所选的彩票(和往常一样，不同的随机机会行动是相互独立的)。如果这些结果是 \({x}_{i}\)，在 \(P\) 下的概率为 \({p}_{i}\)，在 \(Q\) 下的概率为 \({q}_{i}\)，对于 \(1 \leq  i \leq  n\)，那么组合彩票 \(\left( {1 - \alpha }\right) P + {\alpha Q}\) 也可以被视为一个单阶段过程，以概率 \(\left( {1 - \alpha }\right) {p}_{i} + \alpha {q}_{i}\) 选择 \({x}_{i}\)， \(1 \leq  i \leq  n\)，因此它是通常意义上的彩票。
@@ -412,7 +412,7 @@ P \prec  Q,\;0 < \alpha  \leq  1\; \Rightarrow  \;\left( {1 - \alpha }\right) R 
 
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\linewidth]{images/ch05-fig03.jpg}
+    \includegraphics[width=0.6\linewidth]{translation/images/ch05-fig03.jpg}
     \caption{阿莱悖论，条件(5.25)的一个经验反例，涉及三种假设结果 \(x,y,z\)，即获得100万美元、500万美元或0美元， \(P = y{ \land  }_{0.1}z\) 和 \(Q = {\mathbf{1}}_{x}\)，其中 \(R\) 可以是 \({\mathbf{1}}_{x}\) 或 \({\mathbf{1}}_{z}\)。}
     \label{fig:5.2}
   \end{figure}
@@ -435,7 +435,7 @@ P \prec  Q,\;0 \leq  \alpha  < \beta  \leq  1\; \Rightarrow  \;\left( {1 - \alph
 设 \(P \prec  Q\) 和 \(0 \leq  \alpha  < \beta  \leq  1\)，这意味着 \(0 \leq  \frac{\alpha }{\beta } < 1\)，因此 \(0 < 1 - \frac{\alpha }{\beta } \leq  1\)。以下概率树说明了该证明过程:
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\linewidth]{images/ch05-fig04.jpg}
+    \includegraphics[width=0.6\linewidth]{translation/images/ch05-fig04.jpg}
   \end{figure}
 我们两次使用(5.25)，首先证明 \(\frac{\alpha }{\beta }Q + \left( {1 - \frac{\alpha }{\beta }}\right) P \prec  \frac{\alpha }{\beta }Q + \left( {1 - \frac{\alpha }{\beta }}\right) Q\)，然后在 \(\left( {1 - \beta }\right) P + \beta {Q}^{\prime }\) 中用任一组合彩票替换 \({Q}^{\prime }\)，这就证明了(5.26)。
 \end{proof}
@@ -457,7 +457,7 @@ P \prec  Q \prec  R\; \Rightarrow  \;\exists \alpha  \in  \left( {0,1}\right)  :
 因为效用函数 \(u : X \rightarrow  \mathbb{R}\) 取实数值，所以存在具有偏好关系 \(\lesssim\) 的集合 \(X\) (已限制为确定性结果)，根据(5.8)不能用效用函数来表示。经典的例子是 \(X = {\left\lbrack  0,1\right\rbrack  }^{2}\) 与 \(\precsim\) 构成的字典序 \({ \leq  }_{\text{ lex }}\)，如(5.11)所定义，如图5.3所示。
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{images/ch05-fig05.jpg}
+    \includegraphics[width=0.5\linewidth]{translation/images/ch05-fig05.jpg}
     \caption{集合 \(X = {\left\lbrack  0,1\right\rbrack  }^{2}\)，其字典序为 \({ \leq  }_{\text{ lex }}\)，以 \(\precsim\) 表示。一个效用函数 \(u\left( {{x}_{1},{x}_{2}}\right)\) 必须将 \(X\) 中不可数的垂直条带映射到 \(\mathbb{R}\) 中的非空不相交区间，这是不可能的。}
     \label{fig:5.3}
   \end{figure}
@@ -673,7 +673,7 @@ u\left( {z}_{i}\right)  = \frac{-{\delta }_{i}}{1 - {\delta }_{i}} = 1 - \frac{1
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\linewidth]{images/ch05-fig06.jpg}
+    \includegraphics[width=0.6\linewidth]{translation/images/ch05-fig06.jpg}
     \caption{左图:经过点 \(x\) 和 \(y\) 的直线由点 \(x + \lambda \left( {y - x}\right)\) 给出，其中 \(\lambda  \in  \mathbb{R}\)。示例包括当 \(\lambda  = {0.6}\) 时的点 \(a\) 、当 \(\lambda  = {1.5}\) 时的点 \(b\) 以及当 \(\lambda  =  - {0.4}\) 时的点 \(c\)。当 \(\lambda\) 限制在 \(0 \leq  \lambda  \leq  1\) 时得到连接 \(x\) 和 \(y\) 的线段。右图展示了实数区间 \(\left\lbrack  {0,1}\right\rbrack\) 如何通过映射 \(\lambda  \mapsto  \left( {1 - \lambda }\right) x + {\lambda y}\) 自然地映射到该线段上。}
     \label{fig:5.4}
   \end{figure}
@@ -689,7 +689,7 @@ u\left( {z}_{i}\right)  = \frac{-{\delta }_{i}}{1 - {\delta }_{i}} = 1 - \frac{1
 
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\linewidth]{images/ch05-fig07.jpg}
+    \includegraphics[width=0.6\linewidth]{translation/images/ch05-fig07.jpg}
     \caption{区间 \(\left\lbrack  {0,1}\right\rbrack\) 上凹函数 \(u\left( x\right)  = \sqrt{x}\) 的示例。}
     \label{fig:5.5}
   \end{figure}
