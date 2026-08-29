@@ -50,7 +50,7 @@
 
 \begin{figure}[ht] % 使用 figure 环境方便管理
     \centering % 居中命令
-    \includegraphics[width=0.3\textwidth]{images/ch02-fig01.jpg}     
+    \includegraphics[width=0.3\textwidth]{translation/images/ch02-fig01.jpg}
     \caption{一个拥塞网络。节点 $o$ 和 $d$ 分别是所有用户的起点和终点；两条平行边的成本 $c(x)$ 取决于相应边上的用户数量 $x$。}
     \label{fig:2.1}
 \end{figure}
@@ -66,7 +66,7 @@
 如果用每个用户的平均成本来衡量，自私路由是否总能达到社会最优呢？在这个例子中，一个用户走上边、另一个用户走下边时，二者成本分别为2和1，平均成本为1.5，这显然是社会最优的。相比之下，两个用户都走下边也是均衡，但二者都承担成本2，平均成本更高。
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.3\textwidth]{images/ch02-fig02.jpg}
+\includegraphics[width=0.3\textwidth]{translation/images/ch02-fig02.jpg}
 \caption{与图~\ref{fig:2.1}相同的庇古网络，但上边的固定成本为 \(c\left( x\right)  = 100\)。这里假设100个用户想从 \(o\) 前往 \(d\)。}
 \label{fig:2.2}
 \end{figure}
@@ -103,7 +103,7 @@
 
 \begin{figure}
 \centering
-\includegraphics[width=0.9\textwidth]{images/ch02-fig03.jpg}
+\includegraphics[width=0.9\textwidth]{translation/images/ch02-fig03.jpg}
 \caption{布雷斯悖论。每条边都有一个成本函数 \(c\left( x\right)\)，其中 \(x\) 是该边上的流量，不同边上的流量可以不同。右侧网络比左侧网络多了一条零成本边 \({uv}\)。对于100个用户，左侧网络的均衡流是最优的；右侧网络虽然容量更大，均衡成本反而更高。}
 \label{fig:2.3}
 \end{figure}
@@ -118,7 +118,7 @@
 换个角度看，如果将节点 \(u\) 与 \(v\) 合并为一个节点，那么成本为零的新边 \({uv}\) 实际上把网络分解成了两个庇古网络，如下图所示。第一个庇古网络从 \(o\) 到目的地 \(v\)，有两条路线：一条是固定成本为100的边 \(ov\)，另一条是先走 \({ou}\) 再走 \({uv}\)，其中成本 \(c\left( x\right)  = x\) 全部来自第一条边 \({ou}\)。第二个庇古网络从 \(u\) 到 \(d\)，同样有两条路线：一条是固定成本为100的边 \({ud}\)，另一条是先走 \({uv}\) 再走 \({vd}\)，其中只有第二条边有成本。与庇古网络一样, 固定成本边 \(ov\) 和 \({ud}\) 基本不会被使用，这两条固定成本边上各至多有一名用户。
 
 \begin{center}
-\includegraphics[width=0.5\textwidth]{images/ch02-fig04.jpg}
+\includegraphics[width=0.5\textwidth]{translation/images/ch02-fig04.jpg}
 \end{center}
 庇古网络说明，自私行为产生的均衡流成本可能比社会最优流成本更高。图~\ref{fig:2.3}中新增的零成本边 \({uv}\) 则更进一步：它表明给网络增加容量，反而可能让均衡状态下的拥塞更严重，因为新的捷径破坏了原本两条路线之间的平衡。这一现象称为布雷斯悖论，以Braess (1968)命名。
 
@@ -230,7 +230,7 @@ theorem 12.3)。练习~\ref{exer:2.3} 给出了一个真正达到这一比率的
 \begin{exercise}\label{exer:2.1}考虑下面的拥塞网络。起点为 \(o\)，终点为 \(d\)，中间节点为 \(v\)。共有十个个体用户想从 \(o\) 前往 \(d\)。
 
 \begin{center}
-\includegraphics[width=0.4\textwidth]{images/ch02-fig05.jpg}
+\includegraphics[width=0.4\textwidth]{translation/images/ch02-fig05.jpg}
 \end{center}
 如图所示，若底部直达边上有 \(x\) 个用户，则该边成本为 \(c\left( x\right)  = x + 2\)，其中 \(x + y = {10}\)。从 \(o\) 到 \(v\) 的边成本为 \(c\left( y\right)  = y\)。从 \(v\) 到 \(d\) 的上边成本恒为3；从 \(v\) 到 \(d\) 的下边若有 \(z\) 个用户使用，则成本为 \(c\left( z\right)  = z\)，其中 \(0 \leq  z \leq  y\)。
 
@@ -241,7 +241,7 @@ theorem 12.3)。练习~\ref{exer:2.3} 给出了一个真正达到这一比率的
 \begin{exercise}\label{exer:2.2}考虑下面两个拥塞网络。图中标出了各边关于其流量 \(x\) 的成本函数；例如，\({50} + x\) 是 \(c\left( x\right)  = {50} + x\) 的简写。注意，不同边上的流量 \(x\) 可能不同，这取决于用户选择的路线。
 
 \begin{center}
-\includegraphics[width=0.9\textwidth]{images/ch02-fig06.jpg}
+\includegraphics[width=0.9\textwidth]{translation/images/ch02-fig06.jpg}
 \end{center}
 假设共有六个用户想从 \(o\) 前往 \(d\)。
 
@@ -252,7 +252,7 @@ theorem 12.3)。练习~\ref{exer:2.3} 给出了一个真正达到这一比率的
 \begin{exercise}\label{exer:2.3}
 考虑下面这个有三个节点的拥塞网络。如图所示，除边 \({vu}\) 和 \({wu}\) 外，每条边在流量(即用户数量)为 \(x\) 时的成本均为 \(c\left( x\right)  = x\)；而在边 \({vu}\) 和 \({wu}\) 上，成本为 \(c\left( x\right)  = 0\)。右侧表格给出了四个用户 \(i = 1,2,3,4\) 的起点 \({o}_{i}\) 和终点 \({d}_{i}\)。在这个网络中，每个用户从自己的起点到终点都有两条可选路线。
 \begin{center}
-\includegraphics[width=0.8\textwidth]{images/ch02-fig07.jpg}
+\includegraphics[width=0.8\textwidth]{translation/images/ch02-fig07.jpg}
 \end{center}
 求出这个拥塞博弈的两个均衡：一个低成本均衡和一个高成本均衡。分别说明为什么它们满足均衡条件，并比较这两个均衡的成本。社会最优流是什么？它可以不是均衡。
 
