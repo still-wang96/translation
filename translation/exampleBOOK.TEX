@@ -1,5 +1,9 @@
 \documentclass[10pt,a4paper,openany,twoside]{book}
-\input{SETUP/PACKAGE.tex}   %引用宏包所在位置
+% Overleaf 从 GitHub 仓库根目录启动编译；将翻译目录加入 TeX 的输入搜索路径。
+\makeatletter
+\def\input@path{{translation/}}
+\makeatother
+\input{SETUP/PACKAGE.TEX}   %引用宏包所在位置
 \makeindex
 \usepackage{dcolumn}
 \usepackage[UTF8,fontset=none]{ctex}
@@ -37,7 +41,7 @@
 \usepackage{amssymb}
 
 % 导言区
-\graphicspath{{Fig/}{images/}{translation/Fig/}{translation/images/}}% 可选：设置搜索路径(注意大小写)
+\graphicspath{{translation/}{translation/Fig/}{translation/images/}{Fig/}{images/}}% 可选：设置搜索路径(注意大小写)
 
 % --- 为图片文件添加搜索路径 ---
 % 告诉LaTeX，图片文件也可以在 ../images/ 目录下找到
@@ -47,7 +51,7 @@
 % 这需要使用一个内部宏 \input@path
 % 你可以把所有可能的 .tex 文件父目录都加进去
 \makeatletter
-\def\input@path{{../}{../chapters/}}
+\def\input@path{{translation/}}
 \makeatother
 
 % --- 为其他文件（如 .sty, .cls, .bib）添加搜索路径 ---
@@ -60,7 +64,7 @@
 
 \begin{document}
 
-\input{SETUP/FORMAT.tex}    %格式所在位置
+\input{SETUP/FORMAT.TEX}    %格式所在位置
   \fontsize{12}{20}\selectfont%
   \baselineskip 20pt %
   \parindent 2em
@@ -69,7 +73,7 @@
 %-----------------------------------------------------------------------------
 \input{PREFACE/COVER.TEX} %备注：这里文件夹的名字必须严格区分大小写
 \input{PREFACE/PREFACE0.TEX} 
-\input{PREFACE/PreFACE1.tex} 
+\input{PREFACE/PREFACE1.TEX}
 %---------------------------------------目录部分---------------------------------
 \setcounter{tocdepth}{1}      %重新开始页码
 
@@ -91,20 +95,20 @@
 
 \mainmatter    %前言和目录页码结束，正文重新开始设置页码
 %-----------------------------------------正文开始---------------------------------
-\input{BOOK/chap1}       %第一章
-\input{BOOK/chap2}       %第二章
-\input{BOOK/chap3}       %第三章
-\input{BOOK/chap4}       %第四章
-\input{BOOK/chap5}       %第五章
-\input{BOOK/chap6}
-\input{BOOK/chap7}
-\input{BOOK/chap8}       %第八章
-\input{BOOK/chap9}       %第八章
-\input{BOOK/chap10} 
-\input{BOOK/chap11}
-\input{BOOK/chap12}
+\input{BOOK/CHAP1.TEX}       %第一章
+\input{BOOK/CHAP2.TEX}       %第二章
+\input{BOOK/CHAP3.tex}       %第三章
+\input{BOOK/CHAP4.tex}       %第四章
+\input{BOOK/CHAP5.tex}       %第五章
+\input{BOOK/CHAP6.tex}
+\input{BOOK/CHAP7.tex}
+\input{BOOK/CHAP8.tex}       %第八章
+\input{BOOK/CHAP9.tex}       %第九章
+\input{BOOK/CHAP10.TEX}
+\input{BOOK/CHAP11.TEX}
+\input{BOOK/CHAP12.TEX}
 \newpage
-\input{BOOK/INDEX}       %第三章
+\input{BOOK/INDEX.TEX}       %索引
 
 
 \iffalse
