@@ -286,7 +286,6 @@ P \precsim Q
 \vcenter{\hbox{
     \includegraphics[width=0.2\textwidth]{images/ch05-fig02.jpg}
 }}
-\label{eq:probability-tree}
 \end{equation}
 在第一阶段，以概率 \(1 - \alpha\) 选择 \(P\)，以概率 \(\alpha\) 选择 \(Q\)，然后以各自的结果概率来进行所选的彩票(和往常一样，不同的随机机会行动是相互独立的)。如果这些结果是 \({x}_{i}\)，在 \(P\) 下的概率为 \({p}_{i}\)，在 \(Q\) 下的概率为 \({q}_{i}\)，对于 \(1 \leq  i \leq  n\)，那么组合彩票 \(\left( {1 - \alpha }\right) P + {\alpha Q}\) 也可以被视为一个单阶段过程，以概率 \(\left( {1 - \alpha }\right) {p}_{i} + \alpha {q}_{i}\) 选择 \({x}_{i}\)， \(1 \leq  i \leq  n\)，因此它是通常意义上的彩票。
 
@@ -415,7 +414,7 @@ P \prec  Q,\;0 < \alpha  \leq  1\; \Rightarrow  \;\left( {1 - \alpha }\right) R 
     \centering
     \includegraphics[width=0.6\linewidth]{images/ch05-fig03.jpg}
     \caption{阿莱悖论，条件(5.25)的一个经验反例，涉及三种假设结果 \(x,y,z\)，即获得100万美元、500万美元或0美元， \(P = y{ \land  }_{0.1}z\) 和 \(Q = {\mathbf{1}}_{x}\)，其中 \(R\) 可以是 \({\mathbf{1}}_{x}\) 或 \({\mathbf{1}}_{z}\)。}
-    \label{fig: 5.2}
+    \label{fig:5.2}
   \end{figure}
 
 图\eqref{fig:5.2}给出了一个被称为阿莱悖论的例子，在某些假设情形下，人们可能会违背条件(5.25)。考虑三种结果 \(x,y,z\)，其中 \(x\) 表示“获得100万美元”， \(y\) 表示“获得500万美元”， \(z\) 表示“获得0美元”。设 \(P\) 为简单彩票 \(y{ \land  }_{0.1}z\)，并设 \(Q = {\mathbf{1}}_{x}\)。偏好关系 \(P \prec  Q\) 意味着参与人宁愿确定地获得100万美元，也不愿以90\%的概率获得500万美元，10\%的概率一无所获。现在考虑彩票 \(R = {\mathbf{1}}_{z}\)，并设 \(\alpha  = {0.1}\)。那么，图\eqref{fig:5.2}右侧所示的组合彩票 \(\left( {1 - \alpha }\right) R + {\alpha P}\) 意味着参与人有91\%的概率一无所获，有9\%的概率获得500万美元；而 \(\left( {1 - \alpha }\right) R + {\alpha Q}\) 意味着参与人有90\%的概率一无所获，有10\%的概率获得100万美元。鉴于参与人很可能无论如何都一无所获，他的偏好现在可能会逆转，即 \(\left( {1 - \alpha }\right) R + {\alpha Q} \prec  \left( {1 - \alpha }\right) R + {\alpha P}\)，这与条件(5.25)相矛盾。另一方面，如果是图\eqref{fig:5.2}左侧所示的 \(R = {\mathbf{1}}_{x}\)，那么 \(\left( {1 - \alpha }\right) R + {\alpha P}\) 意味着参与人有90\%的概率获得100万美元，有1\%的概率一无所获，有9\%的概率获得500万美元；而 \(\left( {1 - \alpha }\right) R + {\alpha Q}\) 意味着参与人确定地获得100万美元，这很可能使他在与 \(R\) 组合时也保持原来的偏好 \(P \prec  Q\)，符合条件(5.25)。
@@ -456,10 +455,11 @@ P \prec  Q \prec  R\; \Rightarrow  \;\exists \alpha  \in  \left( {0,1}\right)  :
 因此 \(Q \sim  \left( {1 - \alpha }\right) P + {\alpha R}\)。
 
 因为效用函数 \(u : X \rightarrow  \mathbb{R}\) 取实数值，所以存在具有偏好关系 \(\lesssim\) 的集合 \(X\) (已限制为确定性结果)，根据(5.8)不能用效用函数来表示。经典的例子是 \(X = {\left\lbrack  0,1\right\rbrack  }^{2}\) 与 \(\precsim\) 构成的字典序 \({ \leq  }_{\text{ lex }}\)，如(5.11)所定义，如图5.3所示。
-  \begin{figure}[H]\label{fig:5.3}
+  \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{images/ch05-fig05.jpg}
     \caption{集合 \(X = {\left\lbrack  0,1\right\rbrack  }^{2}\)，其字典序为 \({ \leq  }_{\text{ lex }}\)，以 \(\precsim\) 表示。一个效用函数 \(u\left( {{x}_{1},{x}_{2}}\right)\) 必须将 \(X\) 中不可数的垂直条带映射到 \(\mathbb{R}\) 中的非空不相交区间，这是不可能的。}
+    \label{fig:5.3}
   \end{figure}
 
 假设存在一个效用函数 \(u : {\left\lbrack  0,1\right\rbrack  }^{2} \rightarrow  \mathbb{R}\)，使得根据式(5.11)，
@@ -671,10 +671,11 @@ u\left( {z}_{i}\right)  = \frac{-{\delta }_{i}}{1 - {\delta }_{i}} = 1 - \frac{1
 其中给定的点 \(x\) 和 \(y\) 仅出现一次。这个表达式(5.45)(以 \(1 - \lambda\) 作为第一个点 \(x\) 的系数，以 \(\lambda\) 作为第二个点 \(y\) 的系数)展示了实数区间 \(\left\lbrack  {0,1}\right\rbrack\) 如何通过 \(\lambda  \in  \left\lbrack  {0,1}\right\rbrack\) 的可能取值自然地映射到连接 \(x\) 和 \(y\) 的线段上，端点分别对应 \(0 \mapsto  x\) 和 \(1 \mapsto  y\)。另见图5.4中的右图。
 \end{mybox}
 
-\begin{figure}[H]\label{fig:5.4}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{images/ch05-fig06.jpg}
     \caption{左图:经过点 \(x\) 和 \(y\) 的直线由点 \(x + \lambda \left( {y - x}\right)\) 给出，其中 \(\lambda  \in  \mathbb{R}\)。示例包括当 \(\lambda  = {0.6}\) 时的点 \(a\) 、当 \(\lambda  = {1.5}\) 时的点 \(b\) 以及当 \(\lambda  =  - {0.4}\) 时的点 \(c\)。当 \(\lambda\) 限制在 \(0 \leq  \lambda  \leq  1\) 时得到连接 \(x\) 和 \(y\) 的线段。右图展示了实数区间 \(\left\lbrack  {0,1}\right\rbrack\) 如何通过映射 \(\lambda  \mapsto  \left( {1 - \lambda }\right) x + {\lambda y}\) 自然地映射到该线段上。}
+    \label{fig:5.4}
   \end{figure}
 
 如果函数 \(u\) 图像上的任意两点都由一条线段连接，且该线段处处不高于函数图像，则称该函数为凹函数。也就是说，对于 \(u\) 定义域内的所有 \(x\) 和 \({x}^{\prime }\)，
@@ -686,10 +687,11 @@ u\left( {z}_{i}\right)  = \frac{-{\delta }_{i}}{1 - {\delta }_{i}} = 1 - \frac{1
 
 如果(5.46)式取等号，那么函数图的那部分本身就是一条线段。如果永远不取等号，即只要 \(x \neq  {x}^{\prime }\) 和 \(0 < \lambda  < 1\) 时，(5.46)式以严格不等式成立，那么函数 \(u\) 被称为严格凹函数。
 
-  \begin{figure}[H]\label{fig:5.5}
+  \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{images/ch05-fig07.jpg}
     \caption{区间 \(\left\lbrack  {0,1}\right\rbrack\) 上凹函数 \(u\left( x\right)  = \sqrt{x}\) 的示例。}
+    \label{fig:5.5}
   \end{figure}
 
 
