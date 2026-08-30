@@ -45,7 +45,7 @@
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{images/ch08-fig01.jpg}
+    \includegraphics[width=0.8\linewidth]{translation/images/ch08-fig01.jpg}
     \caption{足球点球大战中前锋和守门员的策略。除了向左或向右跳跃，守门员还可以等待$(w)$。练习~\ref{exer:8.1}中考虑了前锋向中间射门的额外策略。}
     \label{fig:8.1}
 \end{figure}
@@ -61,7 +61,7 @@
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{images/ch08-fig02.jpg}
+    \includegraphics[width=0.8\linewidth]{translation/images/ch08-fig02.jpg}
     \caption{左上方:点球博弈作为一个零和双矩阵博弈，得分概率作为前锋(玩家I)的效用，而这是守门员(玩家II)效用的负值。右上方:同样的博弈表示为矩阵博弈，只显示了最大值点的效用，而这是最小值点的成本。方框表示最大值点的最优反应效用，圆圈表示最小值点的最优反应(最小)成本。下方:作为最大值点混合策略$(1-p, p)$的函数，最优反应成本的下包络。对于 \(p = \widehat{p} = \frac{1}{3}\) ，这是他的极大极小策略。}
     \label{fig:8.2}
 \end{figure}
@@ -80,7 +80,7 @@
 极大极小收益定义明确，并且不依赖玩家II最后采取哪一个行动，因为我们已经把玩家II所有可能反应中的最小值考虑进去了。这个最大化后的最差收益是唯一的，但实现它的极大极小策略 \(\widehat{x}\) 可能不唯一。图~\ref{fig:8.3}给出一个例子： \(L\) 和 \(R\) 在列 \(w\) 中的收益都为0.6，因此它们都是对 \(w\) 的最优反应；按定义~\ref{def:6.7}，这个博弈是退化的。此时下包络在任意 \(\widehat{p} \in  \left\lbrack  {\frac{1}{5},\frac{2}{3}}\right\rbrack\) 处都达到最大值0.6，于是这些点都给出极大极小策略 \(\widehat{x} = \left( {1 - \widehat{p},\widehat{p}}\right)\)。区间两个端点仍可分别通过 \(l\) 与 \(w\)、 \(w\) 与 \(r\) 的无差异条件，用差分技巧算出。另一方面，例如当 \(\widehat{p} = \frac{1}{2}\) 时，玩家II的唯一最优反应是纯策略 \(w\)。因此不用进一步计算也可知道， \(w\) 是玩家II在任何均衡中的唯一均衡策略；下面命题~\ref{prop:8.3}会解释为什么这一点非常有用。
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{images/ch08-fig03.jpg}
+    \includegraphics[width=0.8\linewidth]{translation/images/ch08-fig03.jpg}
     \caption{ 当列玩家选择 \(w\) 时，罚球博弈的得分概率相同，均为$0.6$。此时博弈是退化的，极大极小策略 \(\left( {1 - \widehat{p},\widehat{p}}\right)\) 不是唯一的， \(\widehat{p} \in  \left\lbrack  {\frac{1}{5},\frac{2}{3}}\right\rbrack\)。}
     \label{fig:8.3}
 \end{figure}
@@ -387,9 +387,9 @@ y^{\prime}=y(1-\varepsilon)+\bar{y}\varepsilon.
 下面这个博弈的纯最优反应标在右侧，它有两个纯策略均衡 $(T, l)$和 $(T, r)$。因此， \(l\) 和 \(r\) 的任意凸组合，也就是最小化者的任意混合策略，都是极小极大策略。唯一的极大极小策略是 \(T\)，因为它是对 \(l\) 的唯一最优反应。该博弈的值为1。若从博弈中删去弱被占优策略 \(B\) 和 \(r\)，博弈值仍为1；但 \(r\) 也因此不再可能作为极小极大策略出现。所以，如果我们只关心零和博弈的值，通常可以移除弱被占优策略并反复这样做；但最优策略集可能会因此缩小。
 
 \begin{center}
-\includegraphics[width=0.4\textwidth]{images/ch08-fig04-1.png}
+\includegraphics[width=0.4\textwidth]{translation/images/ch08-fig04-1.png}
 \hfill
-\includegraphics[width=0.3\textwidth]{images/ch08-fig04.jpg}
+\includegraphics[width=0.3\textwidth]{translation/images/ch08-fig04.jpg}
 \end{center}
 
 \section{延伸阅读}\label{sec:8.6}
@@ -467,7 +467,7 @@ Max & \({\text{min }}l\) & \(w\) & \(r\) \\
 考虑以下双矩阵博弈。
 
 \begin{center}
-\includegraphics[width=0.5\textwidth]{images/ch08-fig05.jpg}
+\includegraphics[width=0.5\textwidth]{translation/images/ch08-fig05.jpg}
 \end{center}
 \hspace*{3em} 
 

@@ -43,7 +43,7 @@
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.3\textwidth]{images/ch06-fig01.jpg}
+  \includegraphics[width=0.3\textwidth]{translation/images/ch06-fig01.jpg}
   \caption{遵守与违规之间的单人决策问题。在给定的收益下，参与人无差异。}
   \label{fig:6.1}
 \end{figure}
@@ -58,7 +58,7 @@
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.4\textwidth]{images/ch06-fig02.jpg}
+  \includegraphics[width=0.4\textwidth]{translation/images/ch06-fig02.jpg}
   \caption{监管者（参与人 I）与被监管者（参与人 II）之间的监管博弈。}
   \label{fig:6.2}
 \end{figure}
@@ -79,7 +79,7 @@
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.4\textwidth]{images/ch06-fig03.jpg}
+  \includegraphics[width=0.4\textwidth]{translation/images/ch06-fig03.jpg}
   \caption{监管博弈中参与人 II 违规的最优反应混合策略概率 $q$（黑线）与参与人 I 检查的混合策略概率 $p$ 的关系图。混合策略方块的绘制使得其角点与图~\ref{fig:6.2} 中的四个单元格相对应。}
   \label{fig:6.3}
 \end{figure}
@@ -89,7 +89,7 @@
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{images/ch06-fig04.jpg}
+  \includegraphics[width=0.9\textwidth]{translation/images/ch06-fig04.jpg}
   \caption{左图：参与人 I 针对 $q$ 的最优反应混合策略概率 $p$（灰线）。右图：两条最优反应线的交点确定了唯一的混合策略纳什均衡，其中 $p=0.1$ 且 $q=0.2$。}
   \label{fig:6.4}
 \end{figure}
@@ -133,12 +133,12 @@ c_{ij} = \sum_{s=1}^{k} a_{is} b_{sj}, \quad
 
 所有向量均为列向量，因此如果 \(x \in  {\mathbb{R}}^{n}\)，那么 \(x\) 是一个 \(n \times  1\) 矩阵， \({x}^{\top }\) 是 \({\mathbb{R}}^{1 \times  n}\) 中对应的行向量，并且通过转置符号可以很容易识别出行向量。向量 \(x \in  {\mathbb{R}}^{n}\) 的分量为 \({x}_{1},\ldots,{x}_{n}\)。我们将 \({\mathbb{R}}^{n}\) 中两个向量 \(x,y\) 的标量积（scalar product）写成矩阵乘积 \({x}^{\top }y\)。用图形表示如下（每个矩阵元素用一个方块表示，这里是 \(n = 4\)）：
 \begin{equation}\label{eq:6.2}
-\vcenter{\hbox{\includegraphics[width=0.3\textwidth]{images/ch06-fig05.jpg}}}
+\vcenter{\hbox{\includegraphics[width=0.3\textwidth]{translation/images/ch06-fig05.jpg}}}
 \end{equation}
 
 我们尽可能使用矩阵乘法。特别地，标量被视为 \(1 \times  1\) 矩阵。列向量 \(x\) 从右侧与标量 \(\lambda\) 相乘，行向量 \({x}^{\top }\) 从左侧与标量 \(\lambda\) 相乘。
 \begin{equation}\label{eq:6.3}
-\vcenter{\hbox{\includegraphics[width=0.7\textwidth]{images/ch06-fig06.jpg}}}
+\vcenter{\hbox{\includegraphics[width=0.7\textwidth]{translation/images/ch06-fig06.jpg}}}
 \end{equation}
 
 更多详细信息请参阅“背景材料：矩阵乘法的可视化”。
@@ -163,23 +163,23 @@ A = \left( \begin{array}{ll} 2 & 0 \\  3 & 1 \end{array}\right)，\;B = \left( \
 \setlength{\parindent}{2em} 
 在矩阵乘积 \(C = {AB}\) 中，根据式~\eqref{eq:6.2} 和\eqref{eq:6.1}， \(C\) 中位于第 \(i\) 行和第 \(j\) 列的元素 \({c}_{ij}\) 是 \(A\) 的第 \(i\) 行与 \(B\) 的第 \(j\) 列的标量积。乘积 \({AB}\)有两种有用的方式来理解。设 \(A \in  {\mathbb{R}}^{m \times  k}\) 和 \(x \in  {\mathbb{R}}^{k}\)。那么 \({Ax} \in  {\mathbb{R}}^{m}\)。设 \(A = \left\lbrack  {{A}_{1}\cdots {A}_{k}}\right\rbrack\)，即 \({A}_{1},\ldots,{A}_{k}\) 是 \(A\) 的列。那么 \({Ax} = {A}_{1}{x}_{1} + \cdots  + {A}_{k}{x}_{k}\)，即 \({Ax}\) 是以 \(x\) 的分量 \({x}_{1},\ldots,{x}_{k}\) 为系数的 \(A\) 的列的线性组合。对于 \(m = 3, k = 4\)，其图示如下:
 \begin{equation}\label{eq:6.4}
-\vcenter{\hbox{\includegraphics[width=0.5\textwidth]{images/ch06-fig07.jpg}}}
+\vcenter{\hbox{\includegraphics[width=0.5\textwidth]{translation/images/ch06-fig07.jpg}}}
 \end{equation}
 
 \setlength{\parindent}{2em} 
 设 \(B \in  {\mathbb{R}}^{k \times  n}\) 和 \(B = \left\lbrack  {{B}_{1}\cdots {B}_{n}}\right\rbrack\)。\({AB}\) 的第 \(j\) 列\(A{B}_{j}\) 是矩阵\(A\) 的各列的线性组合，其中系数由\({B}_{j}\)的各个分量给出。我们可以如下直观理解 \({AB}\) 的列（对于 \(n = 2\)）：
 \begin{equation*}
-\vcenter{\hbox{\includegraphics[width=0.65\textwidth]{images/ch06-fig08.jpg}}}
+\vcenter{\hbox{\includegraphics[width=0.65\textwidth]{translation/images/ch06-fig08.jpg}}}
 \end{equation*}
 
 对 \({AB}\) 的第二种理解方式相同，但使用行。设 \(y \in  {\mathbb{R}}^{k}\)，于是 \({y}^{\top }B\) 是 \({\mathbb{R}}^{1 \times  n}\) 中的一个行向量，它表示为 \(B\) 的行 \({b}_{1}^{\top },\ldots,{b}_{k}^{\top }\) 的线性组合 \({y}_{1}{b}_{1}^{\top } + \cdots  + {y}_{k}{b}_{k}^{\top }\) （我们可以写成 \({B}^{\top } = \left\lbrack  {{b}_{1}\cdots {b}_{k}}\right\rbrack\)），
 \begin{equation}\label{eq:6.5}
-\vcenter{\hbox{\includegraphics[width=0.6\textwidth]{images/ch06-fig09.jpg}}}
+\vcenter{\hbox{\includegraphics[width=0.6\textwidth]{translation/images/ch06-fig09.jpg}}}
 \end{equation}
 
 设 \({A}^{\top } = \left\lbrack  {{a}_{1}\cdots {a}_{m}}\right\rbrack\)。那么 \({AB}\) 的第 \(i\) 行是矩阵\(B\) 的各行的一个线性组合，其中组合系数为矩阵\(A\) 的第 \(i\) 行 \({a}_{i}^{\top }\) 的各个分量：
 \begin{equation*}
-\vcenter{\hbox{\includegraphics[width=0.65\textwidth]{images/ch06-fig10.jpg}}}
+\vcenter{\hbox{\includegraphics[width=0.65\textwidth]{translation/images/ch06-fig10.jpg}}}
 \end{equation*}
 
 熟悉这些操作是很有用的。最常见的是矩阵与列向量右乘，如式\eqref{eq:6.4}所示；或者矩阵与行向量左乘，如式\eqref{eq:6.5}所示。
@@ -284,7 +284,7 @@ A = \left( \begin{array}{lll} 0 & 4 & 0 \\  2 & 2 & 1 \end{array}\right)，\;B =
 \end{equation}
 
 \begin{center}
-\includegraphics[width=0.4\textwidth]{images/ch06-fig11.jpg}
+\includegraphics[width=0.4\textwidth]{translation/images/ch06-fig11.jpg}
 \end{center}
 \hspace*{3em} 
 
@@ -363,7 +363,7 @@ U_{i}(\sigma)
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=1.0\textwidth]{images/ch06-fig12.jpg}
+  \includegraphics[width=1.0\textwidth]{translation/images/ch06-fig12.jpg}
 \caption{当 $m=2,3,4$ 时，玩家 I 的混合策略集合$X$的示例。}
 \label{fig:6.5}
 \end{figure}
@@ -379,7 +379,7 @@ U_{i}(\sigma)
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.3\textwidth]{images/ch06-fig13.jpg}
+  \includegraphics[width=0.3\textwidth]{translation/images/ch06-fig13.jpg}
   \caption{区间 $C=[0,1]$ 情况下布劳威尔不动点定理的证明}
   \label{fig:6.6}
 \end{figure}
@@ -474,7 +474,7 @@ t
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.7\textwidth]{images/ch06-fig14.jpg}
+  \includegraphics[width=0.7\textwidth]{translation/images/ch06-fig14.jpg}
   \caption{性别战博弈（左）和一个 $3 \times 2$ 博弈（右），后者是参与人 I 增加了一个额外策略 $B$ 的相同博弈。}
   \label{fig:6.7}
 \end{figure}
@@ -482,7 +482,7 @@ t
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.4\textwidth]{images/ch06-fig15.jpg}
+  \includegraphics[width=0.4\textwidth]{translation/images/ch06-fig15.jpg}
   \caption{性别战 $2 \times 2$ 博弈（图\ref{fig:6.7} 左侧）的最优反应混合策略 $(1-p,p)$（灰色）和 $(1-q,q)$（黑色）。该博弈有两个纯策略均衡 $\big((1,0),(1,0)\big)$ 和 $\big((0,1),(0,1)\big)$，以及一个混合策略纳什均衡 $\big((\frac{1}{3},\frac{2}{3}),(\frac{2}{3},\frac{1}{3})\big)$。}
   \label{fig:6.8}
 \end{figure}
@@ -496,7 +496,7 @@ t
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{images/ch06-fig16.jpg}
+  \includegraphics[width=0.8\textwidth]{translation/images/ch06-fig16.jpg}
   \caption{用于在 $2 \times 2$ 博弈中寻找混合策略纳什均衡概率的“差分技巧”。左图展示了该博弈，以及每个纯策略下另一个参与人的收益差异。右图显示这些差异被分配到各自的另一个自身策略，并重新归一化为概率。分数 $\frac{11}{5}$ 和 $\frac{38}{10}$ 分别是参与人 II 和参与人 I 的期望收益相等的结果。}
   \label{fig:6.9}
 \end{figure}
@@ -522,7 +522,7 @@ t
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{images/ch06-fig17.jpg}
+  \includegraphics[width=0.9\textwidth]{translation/images/ch06-fig17.jpg}
   \caption{针对图 \ref{fig:6.7}  中的两个博弈，参与人 II 的混合策略下参与人 I 的期望收益的上包络。白色圆圈表示作为均衡一部分的参与人 II 的混合策略。}
   \label{fig:6.10}
 \end{figure}
@@ -575,7 +575,7 @@ t
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.3\textwidth]{images/ch06-fig18.jpg}
+  \includegraphics[width=0.3\textwidth]{translation/images/ch06-fig18.jpg}
   \caption{威胁博弈的策略形式，这是一个退化博弈。}
   \label{fig:6.11}
 \end{figure}
@@ -602,7 +602,7 @@ t
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{images/ch06-fig19.jpg}
+  \includegraphics[width=0.9\textwidth]{translation/images/ch06-fig19.jpg}
   \caption{退化 $2 \times 3$ 博弈以及参与人 II 的期望收益上包络。}
   \label{fig:6.12}
 \end{figure}
