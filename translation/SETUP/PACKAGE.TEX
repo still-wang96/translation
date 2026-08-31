@@ -30,7 +30,15 @@
 \fi
 
 \usepackage[paperwidth=170mm,paperheight=240mm,left=20mm,right=20mm, top=25mm, bottom=15mm]{geometry}               %定义版面paperwidth=185mm,paperheight=230mm
-\usepackage[CJKbookmarks, colorlinks, bookmarksnumbered=true,pdfstartview=FitH,linkcolor=black]{hyperref}   % 选项去掉链接红色方框, 去掉书签可得到想要的印刷效果
+\usepackage[round,authoryear]{natbib}
+\usepackage[CJKbookmarks,colorlinks,bookmarksnumbered=true,pdfstartview=FitH,pagebackref=true]{hyperref}   % 文献引用可点击，并在文献表中生成可点击的引用页码
+\renewcommand*{\backrefalt}[4]{%
+  \ifcase #1\relax
+  \or \unskip\nobreak\hfill\penalty50\hskip1em\hbox{}\nobreak\hfill
+      \mbox{\footnotesize$\uparrow$~#2}%
+  \else \unskip\nobreak\hfill\penalty50\hskip1em\hbox{}\nobreak\hfill
+      \mbox{\footnotesize$\uparrow$~#2}%
+  \fi}
 %\usepackage{etex}                           %定义更多的计数器,否则警告"no room for a new \count"
 %-------------------------------------------------------------------------------------------------------
 %\usepackage{graphicx}
@@ -340,9 +348,6 @@
     \@footnotetext}
 \makeatother 
 
-
-\usepackage{natbib}
-\bibliographystyle{apalike}
 
 \hypersetup{
   colorlinks=true,
